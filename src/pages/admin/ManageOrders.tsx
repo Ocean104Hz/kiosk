@@ -188,7 +188,10 @@ export default function ManageOrders() {
           </button>
         </div>
       </div>
-      <div className="mb-4 flex items-center gap-4">
+      
+      <div className="flex gap-2">
+        
+        <div className="mb-4 flex items-center gap-4">
         <label className="font-semibold">เลือกประเภท:</label>
         <select
           value={filterCategory}
@@ -202,14 +205,16 @@ export default function ManageOrders() {
           ))}
         </select>
       </div>
-      <div>
+      <div className="mb-2 flex items-center gap-2">
+
         <input
           type="text"
           placeholder="ค้นหาด้วยชื่อ, รหัส หรือราคา..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border p-2 rounded w-[300px]"
+          className="border border-gray-400 p-2 rounded w-[300px] mb-2"
         />
+        </div>
       </div>
 
       {/* ตารางแสดงรายการ */}
